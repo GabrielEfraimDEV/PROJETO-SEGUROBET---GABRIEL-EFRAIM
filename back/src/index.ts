@@ -1,15 +1,11 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import taskRoutes from './routes/task.routes';
+// back/src/routes/task.routes.ts
+import { Router } from 'express';
 
-dotenv.config();
+const router = Router();
 
-const app = express();
-const PORT = process.env.PORT || 4000;
-
-app.use(express.json());
-app.use('/api', taskRoutes);
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// Exemplo de rota
+router.get('/', (req, res) => {
+  res.json({ message: 'Rota de tarefas funcionando!' });
 });
+
+export default router;
