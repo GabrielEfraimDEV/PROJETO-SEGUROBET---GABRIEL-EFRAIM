@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { TaskService } from '../services/task.service';
 
-// Controller lida com requisições HTTP
+// Controller  para lidar com requisições HTTP
 export class TaskController {
   static async getAll(req: Request, res: Response) {
     const tasks = await TaskService.getAll();

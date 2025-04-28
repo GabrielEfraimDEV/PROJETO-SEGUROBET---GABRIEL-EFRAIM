@@ -9,7 +9,6 @@ dotenv.config();
 // Cria aplicação Express
 const app: Application = express();
 const port = process.env.PORT || 3000;
-
 // Middlewares
 app.use(cors()); // Habilita CORS para todas as origens
 app.use(express.json()); // Faz o parsing de JSON no body das requisições

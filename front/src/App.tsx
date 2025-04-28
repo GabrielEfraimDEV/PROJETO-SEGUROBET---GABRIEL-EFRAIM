@@ -20,12 +20,13 @@ const App: React.FC = () => {
   const filtered = tasks.filter(t => filter === 'all' ? true : t.status === filter);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
-      <h1 className="text-3xl font-bold text-blue-700 mb-8">ToDo List SeguroBet</h1>
+    // Adicionado 'justify-center' para centralizar verticalmente
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6">
+      <h1 className="text-3xl font-bold text-green-700 mb-8">Lista de tarefas SeguroBet</h1>
 
       <div className="w-full max-w-2xl bg-white p-6 rounded-lg shadow-lg">
         <TaskForm onTaskAdded={loadTasks} />
-        
+
         <div className="flex justify-center mb-6 space-x-4">
           <button onClick={() => setFilter('all')} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded transition">
             Todas
